@@ -253,6 +253,7 @@ DEPENDENCIES
   debug
   dotenv
   importmap-rails
+  net-protocol (~> 0.2.2)
   net-ssh
   pg
   propshaft

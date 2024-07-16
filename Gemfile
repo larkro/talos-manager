@@ -30,3 +30,5 @@ end
 group :production do
   gem "cloudflare-rails" # fixes request.remote_ip behind Cloudflare proxy
 end
+
+gem "net-protocol", "~> 0.2.2"
