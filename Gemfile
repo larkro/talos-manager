@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.0"
+ruby "3.3.3"
 
 # Keep dotenv at top to ensure ENV variables are loaded before other gems initialize
 gem "dotenv", require: "dotenv/load", groups: %i[development test]
