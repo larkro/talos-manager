@@ -9,7 +9,7 @@ class CreateMachineConfigs < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    HetznerServer.where.not(config_id: nil).find_each do |hetzner_server|
+    Server.where.not(config_id: nil).find_each do |hetzner_server|
       hetzner_server.create_machine_config!(
         config_id: hetzner_server.config_id,
         hostname: hetzner_server.name,

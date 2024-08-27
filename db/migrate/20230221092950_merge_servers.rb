@@ -9,7 +9,7 @@ class MergeServers < ActiveRecord::Migration[7.0]
     add_index :hetzner_servers, :ip, unique: true
 
     Server.find_each do |server|
-      HetznerServer.where(ip: server.public_ip).update!(
+      Server.where(ip: server.public_ip).update!(
         uuid: server.smbios_uuid,
         private_ip: server.private_ip,
         config_id: server.config_id,
